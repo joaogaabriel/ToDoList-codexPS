@@ -1,0 +1,12 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "criação todolist pscodex",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "author": "joao gabriel",
+  "license": "ISC"
+  
+}
