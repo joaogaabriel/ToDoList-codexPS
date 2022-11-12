@@ -5,7 +5,7 @@ const Task = require("../models/Task");
 const getAllTasks = async (req, res) => {
   try {
     const tasksList = await Task.find();
-    return res.render("index", {tasksList, task: null});
+    return res.render("index", {tasksList, task: null, taskDelete: null});
   } catch (err) {
     res.status(500).send({ error: err.message });
   }
@@ -52,10 +52,20 @@ const updateOneTask = async (req, res) => {
   }
 };
 
+const deleteOneTask = async(req, res) =>{
+  try{
+    await Task.deleteOne( { _id: req.params.id} )
+    res.redirect("/");
+  } catch{
+    res.status(500).send({ error: err.message });
+  }
+}
+
 
 module.exports = {
   getAllTasks,
   createTask,
   getById,
   updateOneTask,
+  deleteOneTask,
 };
