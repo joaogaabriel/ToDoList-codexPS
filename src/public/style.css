@@ -6,8 +6,13 @@ a:visited {
     color: whitesmoke;
     text-decoration: none;
 }
+
 button:hover {
     background-color: yellow;
+}
+#sapos {
+    font-family: "Lucida Handwriting",Cursive;
+    background-color : green;
 }
 #container {
     width: 100vw;
@@ -31,6 +36,9 @@ button:hover {
     padding: 12px 20px;
     margin: 1px 0;
     box-sizing: border-box;
+}
+#taskDate {
+    font-family: "Lucida Handwriting",Cursive;
 }
 #buttons{
     position:relative;
@@ -66,13 +74,17 @@ button:hover {
     display: inline-block;
     font-size: 16px;
 }
+#taskdelete {
+    background-color: green;
+
+}
 #buttonApagar {
     background-color: red;
     border: 2px solid darkred;
-    position: relative;
+    position: absolute;
+    right: -15%;
     width:50px;
     height:20px;
-    left:32%;
     color: white;
     padding: 8px 17px;
     text-align: center;
@@ -80,6 +92,8 @@ button:hover {
     display: inline-block;
     font-size: 16px;
 }
+
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -88,6 +102,8 @@ input[type=text] {
 }
 body{
     background-color : gainsboro;
+
+
 }
 
 
