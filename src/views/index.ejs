@@ -4,10 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href = "style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>To Do List</title>
+    <style>
+    body {background-color : gainsboro;}
+    a:link {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    a:visited {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    #buttons {
+        position:relative;
+        top:-50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    #tasks {
+        height: 9vh;
+        font-size: 20px;
+        padding: 12px 20px;
+        margin: 1px 0;
+        box-sizing: border-box;
+    }
+    #taskReference {
+        height: 9vh;
+        background-color: ghostwhite;
+        font-size: 20px;
+        padding: 12px 20px;
+        margin: 1px 0;
+        box-sizing: border-box;
+    }
+    #taskDate {
+        font-family: "Lucida Handwriting",Cursive;
+    }
+    #buttons {
+        position:relative;
+        top:-50%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    #addButton {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        position: absolute;
+
+        left:68%;
+        width:100px;
+        height:35px;
+        color: white;
+        padding: 7px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+    #buttonEditar {
+        background-color: cornflowerblue;
+        border: 2px solid darkslategrey;
+        position: absolute;
+        width:50px;
+        height:20px;
+        color: white;
+        padding: 8px 17px;
+        text-align: center;
+        text-decoration: ghostwhite;
+        display: inline-block;
+        font-size: 16px;
+    }
+    #container {
+        width: 100vw;
+        height: 9vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+     }
+    </style>
 </head>
 <body>
+     <% if (taskDelete != null) { %>
+        <section id="modal" style="background-color: ghostwhite;font-size: 20px;border: 2px solid darkslategrey;display: inline-block;text-align: center;width: 100vw;">
+             </div >
+                <div id="card">
+                    <a href="/"></a>
+                    <h2 style="font-family: Cursive" >Confirmação</h2>
+                </div>
+                <p style="font-family: Cursive;">
+                   Deseja realmente apagar essa tarefa: "<%= taskDelete.task %>"?
+                   <b style="font-family: Cursive">a ação não poderá ser desfeita </b>
+                </p>
+                <a href="/" style="font-family: Cursive;background-color: red;border: 2px solid darkslategrey">Cancelar</a>
+                <a href="/deleteOne/<%= taskDelete._id %>" style="font-family: Cursive;background-color: green;border: 2px solid darkslategrey">Confirmar</a>
+            </div>
+        </section>
+        <% } %>
    <div id = "container">
     <% if (task == null) { %>
            <form action="/create" method="post">
@@ -25,7 +118,7 @@
     <section id="tasks">
         <ul>
             <% tasksList.forEach((task)=>{ %>
-                <li id = taskReference>
+                <li id = "taskReference">
                     <div id= "taskDate">
                      <%= task.task %> | <%= task.date.toLocaleDateString('pt-BR') %>
                     </div>
@@ -41,25 +134,12 @@
                 </li>
             <% }) %>
         </ul>
+
     </section>
 
 
-    <% if (taskDelete != null) { %>
-    <section id="modal">
-         </div>
-             <div id="card">
-                 <a href="/"></a>
-                 <h2>Confirmação</h2>
-             <hr>
-             <p>
-                Deseja realmente apagar essa tarefa: "<%= taskDelete.task %>"?
-                <b>a ação não poderá ser desfeita </b>
-            </p>
-            <a id = "cancell" href="/">Cancelar</a>
-             <a href="/deleteOne/<%= taskDelete._id %>">Confirmar</a>
-        </div>
-    </section>
-    <% } %>
+
+
 
 </body>
 </html>
