@@ -15,13 +15,13 @@ const createTask = async (req, res) => {
   const task = req.body;
 
   if (!task.task) {
-    return res.redirect("/");
+    return res.redirect("/home");
   }
 
 
   try {
     await Task.create(task);
-    return res.redirect("/");
+    return res.redirect("/home");
   } catch (err) {
     res.status(500).send({ error: err.message });
   }
@@ -46,7 +46,7 @@ const updateOneTask = async (req, res) => {
   try {
     const task = req.body;
     await Task.updateOne({ _id: req.params.id }, task);
-    res.redirect("/");
+    res.redirect("/home");
   } catch (err) {
     res.status(500).send({ error: err.message });
   }
@@ -55,7 +55,7 @@ const updateOneTask = async (req, res) => {
 const deleteOneTask = async(req, res) =>{
   try{
     await Task.deleteOne( { _id: req.params.id} )
-    res.redirect("/");
+    res.redirect("/home");
   } catch{
     res.status(500).send({ error: err.message });
   }

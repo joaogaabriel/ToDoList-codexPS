@@ -41,7 +41,7 @@
     <% if (taskDelete != null) { %>
     <section id="modal">
         <div id="card">
-            <a href="/"></a> 
+            <a href="/home"></a> 
             <h2>Confirmação</h2>
 
         <hr>
@@ -49,7 +49,7 @@
             Deseja realmente apagar essa tarefa: "<%= taskDelete.task %>"?
             <b>a ação não poderá ser desfeita </b>
         </p>
-        <a href="/">Cancelar</a>
+        <a href="/home">Cancelar</a>
         <a href="/deleteOne/<%= taskDelete._id %>">Confirmar</a>
         </div>
     </section>
