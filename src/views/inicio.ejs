@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="loginStyle.css">
     <title>To do List</title>
+
     
 </head>
 <body>
-    <div class="card">
+    <div class = "card">
         <div class="card-body">
             <form action="/home" method="get">
                 
@@ -16,8 +18,12 @@
                 <input type="email" name="email" class="form-control"><br>
                 <label for="senha">Senha:</label>
                 <input type="password" name="senha" class="form-control"><br>
-                <button id="addButton" type="submit" class="btn btn-success">Entrar</button><br>
-                <button id="addButton" type="submit" class="btn btn-success">Criar conta</button><br>
+                <div class = "wrapper">
+                    <button id="addButton" type="submit" class="btn btn-success">Entrar</button><br>
+                    <button id="addButton2" type="submit" class="btn btn-success">Criar conta</button><br>
+                </div>
+
+
     
             </form>
         </div>

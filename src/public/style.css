@@ -1,3 +1,119 @@
+
+#container {
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ }
+#card {
+    width: 100vw;
+    height: 9vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#tasks {
+    height: 9vh;
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 1px 0;
+    box-sizing: border-box;
+}
+#taskReference {
+    height: 9vh;
+    background-color: ghostwhite;
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 1px 0;
+    box-sizing: border-box;
+}
+#taskDate {
+    font-family: "Lucida Handwriting",Cursive;
+}
+#buttons {
+    position:relative;
+    top:-50%;
+    display: flex;
+    justify-content: flex-end;
+}
+#addButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    position: absolute;
+
+    left:68%;
+    width:100px;
+    height:35px;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#buttonEditar {
+    background-color: cornflowerblue;
+    border: 2px solid darkslategrey;
+    position: absolute;
+    width:50px;
+    height:20px;
+    color: white;
+    padding: 8px 17px;
+    text-align: center;
+    text-decoration: ghostwhite;
+    display: inline-block;
+    font-size: 16px;
+}
+#taskdelete {
+    background-color: green;
+
+}
+#buttonApagar {
+    background-color: red;
+    border: 2px solid darkred;
+    position: absolute;
+    right: -15%;
+    width:50px;
+    height:20px;
+    color: white;
+    padding: 8px 17px;
+    text-align: center;
+    text-decoration: ghostwhite;
+    display: inline-block;
+    font-size: 16px;
+}
+
+a:link {
+    color: whitesmoke;
+    text-decoration: none;
+}
+a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: yellow;
+}
+p{
+    color: blue;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 1px 0;
+    box-sizing: border-box;
+}
+body{
+    background-color : gainsboro;
+
+
+}
+
+
 h1 {
     color: red;
 }

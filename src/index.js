@@ -2,8 +2,9 @@ const express = require("express");
 const app = express();
 const path = require("path")
 const routes = require("./routes/routes");
-const userRoutes = require("./routes/usuario")
 const connectToDb = require("./database/db");
+
+
 
 const port = 3000;
 
@@ -15,7 +16,6 @@ app.use(express.static(path.join(__dirname, "public")))
 app.use(express.urlencoded())
 
 app.use(routes)
-app.use(userRoutes  )
 
 
 

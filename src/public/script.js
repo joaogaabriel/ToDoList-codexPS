@@ -1,1 +1,12 @@
-alert("olá mundo!")
+import './components/form.jsx'
+import Form from "../components/form";
+
+function App(){
+    return(
+        <div className = "App">
+            <Form/>
+        </div>
+    )
+}
+
+export default  App;

@@ -1,0 +1,70 @@
+
+.card {
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lucida Handwriting",Cursive;
+ }
+
+
+#addButton, #addButton2{
+    width: 200px;
+    height: 30px;
+    background-color: #4CAF50; /* Green */
+    border: 2px solid gainsboro;
+    font-family: "Lucida Handwriting",Cursive;
+
+
+    color: white;
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 16px;
+}
+
+#butn{
+
+    margin: 0 20px;
+    display: block;
+}
+.wrapper{
+    margin: 4px 34px;
+    display: inline-block;
+}
+
+a:link {
+    color: whitesmoke;
+    text-decoration: none;
+}
+a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: yellow;
+}
+p{
+    color: blue;
+}
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 1px 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color : gainsboro;
+
+
+}
+
+
+h1 {
+    color: red;
+}
