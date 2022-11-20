@@ -17,10 +17,14 @@ app.use(express.urlencoded())
 
 app.use(routes)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 app.use(userRoutes)
 >>>>>>> 219e21f7 (	modified:   src/controller/UserController.js)
+=======
+app.use(userRoutes)
+>>>>>>> refs/remotes/origin/erikkbranch
 
 
 
