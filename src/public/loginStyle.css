@@ -16,7 +16,7 @@
     background-color: #4CAF50; /* Green */
     border: 2px solid gainsboro;
     font-family: "Lucida Handwriting",Cursive;
-
+    border-radius: 20px;
 
     color: white;
     padding: 5px 16px;
@@ -24,6 +24,8 @@
     text-decoration: none;
 
     font-size: 16px;
+
+    
 }
 
 #butn{
@@ -47,6 +49,7 @@ a:visited {
 
 button:hover {
     background-color: yellow;
+    padding: 20px;
 }
 p{
     color: blue;
@@ -56,6 +59,7 @@ input {
     padding: 12px 20px;
     margin: 1px 0;
     box-sizing: border-box;
+    border-radius: 12px;
 
 }
 body{
