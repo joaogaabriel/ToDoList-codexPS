@@ -7,20 +7,34 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>To Do List</title>
     <style>
-    body {background-color : gainsboro;}
-    a:link {
-        color: whitesmoke;
-        text-decoration: none;
+        *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     }
-    a:visited {
-        color: whitesmoke;
-        text-decoration: none;
+
+    body{
+        background-color : gainsboro;
+        font-family: "Lucida Handwriting",Cursive;
     }
-    #buttons {
-        position:relative;
-        top:-50%;
+    #container {
+        width: 100vw;
+        height: 9vh;
         display: flex;
-        justify-content: flex-end;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #card {
+        width: 100vw;
+        height: 9vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #task{
+        border-radius: 100px;
     }
     #tasks {
         height: 9vh;
@@ -29,27 +43,33 @@
         margin: 1px 0;
         box-sizing: border-box;
     }
+    .button a{
+        background-color: rgb(224, 100, 100);
+        padding: 0.3em;
+        border-radius: 100px;
+        font-size: 1.2rem;
+        color: black;
+
+    }
     #taskReference {
         height: 9vh;
         background-color: ghostwhite;
+        list-style: none;
         font-size: 20px;
-        padding: 12px 20px;
-        margin: 1px 0;
-        box-sizing: border-box;
-    }
-    #taskDate {
-        font-family: "Lucida Handwriting",Cursive;
-    }
-    #buttons {
-        position:relative;
-        top:-50%;
+        border-radius: 10px;
         display: flex;
-        justify-content: flex-end;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 12px 20px;
+        margin-top: 0.4em;
+        margin-bottom: 0.8em;
     }
+
     #addButton {
         background-color: #4CAF50; /* Green */
         border: none;
         position: absolute;
+        border-radius: 100px;
 
         left:68%;
         width:100px;
@@ -61,47 +81,30 @@
         display: inline-block;
         font-size: 16px;
     }
-    #buttonEditar {
-        background-color: cornflowerblue;
-        border: 2px solid darkslategrey;
-        position: absolute;
-        width:50px;
-        height:20px;
-        color: white;
-        padding: 8px 17px;
-        text-align: center;
-        text-decoration: ghostwhite;
-        display: inline-block;
-        font-size: 16px;
+
+    #taskdelete {
+        background-color: green;
+
     }
-    #buttonApagar {
-        background-color: red;
-        border: 2px solid darkred;
-        position: absolute;
-        right: -15%;
-        width:50px;
-        height:20px;
-        color: white;
-        padding: 8px 17px;
-        text-align: center;
-        text-decoration: ghostwhite;
-        display: inline-block;
-        font-size: 16px;
+
+
+    a:link {
+        color: whitesmoke;
+        text-decoration: none;
     }
-    #container {
-        width: 100vw;
-        height: 9vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-     }
-     input[type=text] {
-         width: 100%;
-         padding: 12px 20px;
-         margin: 1px 0;
-         box-sizing: border-box;
-     }
+    a:visited {
+        color: whitesmoke;
+        text-decoration: none;
+    }
+
+
+    input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 1px 0;
+        box-sizing: border-box;
+    }
+
     </style>
 </head>
 <body>
@@ -138,19 +141,16 @@
     <section id="tasks">
         <ul>
             <% tasksList.forEach((task)=>{ %>
+
                 <li id = "taskReference">
                     <div id= "taskDate">
-                     <%= task.task %> | <%= task.date.toLocaleDateString('pt-BR') %>
+                        <%= task.task %> | <%= task.date.toLocaleDateString('pt-BR') %> |
+                        <input type="checkbox" id="con" name="con" value="concluido">                        
                     </div>
-                    <div id = buttons>
-                         <div id ="buttonEditar">
-                             <a href="/getById/<%= task._id %>/update">Editar</a>
-                         </div>
-                         <div id = "buttonApagar">
-                             <a href="/getById/<%= task._id %>/delete">Apagar</a>
-                         </div>
+                    <div class="button">
+                        <a href="/getById/<%= task._id %>/delete">Apagar</a>
+                        <a href="/getById/<%= task._id %>/update" style="background-color: blue;" >Editar</a>
                     </div>
-
                 </li>
             <% }) %>
         </ul>

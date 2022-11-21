@@ -1,5 +1,5 @@
 const  moongose = require("mongoose")
-
+const bcrypt = require("bcrypt")
 
 const usuarioSchema = new moongose.Schema({
     nome:{
@@ -14,6 +14,16 @@ const usuarioSchema = new moongose.Schema({
         type: String,
         require: true,
     }
+},{
+    timestamps: true
+});
+
+usuarioSchema.pre('save', function(next){
+    if(!this.isModified("senha")){
+        return next();
+    }
+    this.senha = bcrypt.hashSync(this.senha, 10)
+    next();
 });
 
 module.exports = moongose.model("Usuario", usuarioSchema);

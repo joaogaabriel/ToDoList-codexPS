@@ -1,4 +1,13 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body{
+    background-color : gainsboro;
+    font-family: "Lucida Handwriting",Cursive;
+}
 #container {
     width: 100vw;
     height: 9vh;
@@ -15,6 +24,9 @@
     justify-content: center;
     align-items: center;
 }
+#task{
+    border-radius: 100px;
+}
 #tasks {
     height: 9vh;
     font-size: 20px;
@@ -22,27 +34,33 @@
     margin: 1px 0;
     box-sizing: border-box;
 }
+.button a{
+    background-color: rgb(224, 100, 100);
+    padding: 0.3em;
+    border-radius: 100px;
+    font-size: 1.2rem;
+    color: black;
+
+}
 #taskReference {
     height: 9vh;
     background-color: ghostwhite;
+    list-style: none;
     font-size: 20px;
-    padding: 12px 20px;
-    margin: 1px 0;
-    box-sizing: border-box;
-}
-#taskDate {
-    font-family: "Lucida Handwriting",Cursive;
-}
-#buttons {
-    position:relative;
-    top:-50%;
+    border-radius: 10px;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 20px;
+    margin-top: 0.4em;
+    margin-bottom: 0.8em;
 }
+
 #addButton {
     background-color: #4CAF50; /* Green */
     border: none;
     position: absolute;
+    border-radius: 100px;
 
     left:68%;
     width:100px;
@@ -54,37 +72,12 @@
     display: inline-block;
     font-size: 16px;
 }
-#buttonEditar {
-    background-color: cornflowerblue;
-    border: 2px solid darkslategrey;
-    position: absolute;
-    width:50px;
-    height:20px;
-    color: white;
-    padding: 8px 17px;
-    text-align: center;
-    text-decoration: ghostwhite;
-    display: inline-block;
-    font-size: 16px;
-}
+
 #taskdelete {
     background-color: green;
 
 }
-#buttonApagar {
-    background-color: red;
-    border: 2px solid darkred;
-    position: absolute;
-    right: -15%;
-    width:50px;
-    height:20px;
-    color: white;
-    padding: 8px 17px;
-    text-align: center;
-    text-decoration: ghostwhite;
-    display: inline-block;
-    font-size: 16px;
-}
+
 
 a:link {
     color: whitesmoke;
@@ -95,25 +88,10 @@ a:visited {
     text-decoration: none;
 }
 
-button:hover {
-    background-color: yellow;
-}
-p{
-    color: blue;
-}
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 1px 0;
     box-sizing: border-box;
-}
-body{
-    background-color : gainsboro;
-
-
-}
-
-
-h1 {
-    color: red;
 }

@@ -1,4 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color : gainsboro;
+    text-align: center;
+    font-family: "Lucida Handwriting",Cursive;
+}
 
+h1{
+    margin-top: 0.8em;
+    font-size: 3em;
+}
 .card {
     width: 100vw;
     height: 75vh;
@@ -6,20 +20,35 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-family: "Lucida Handwriting",Cursive;
+ }
+img{
+    width: 26em;
+    height: 18.1em;
+    border-radius: 10px 10px;
+
+
+}
+.card-body form{
+    margin-top: 1.5em;
+    padding: 20px;
+}
+
+ .card-body
+ {
+    border-radius: 10px 10px;
+    box-shadow: 10px 1px 15px rgba(0, 0, 0, 0.438);
+    display: flex;
+    justify-content: center;
+    background-color: white;
  }
 
-
 #addButton, #addButton2{
-    width: 200px;
-    height: 30px;
-    background-color: #4CAF50; /* Green */
-    border: 2px solid gainsboro;
-    font-family: "Lucida Handwriting",Cursive;
-    border-radius: 20px;
+    background-color: #39923f;
 
+    border: 1px solid gainsboro;
+    border-radius: 100px;
     color: white;
-    padding: 5px 16px;
+    padding: 0.3em 0.6em;
     text-align: center;
     text-decoration: none;
 
@@ -27,15 +56,24 @@
 
     
 }
+#addButton:hover, #addButton2:hover{
+    cursor: pointer;
+    background-color: #4CAF50; /* Green */
+    color: black;
+    transform: scale(1.1);
+    
+}
 
 #butn{
-
     margin: 0 20px;
     display: block;
 }
 .wrapper{
-    margin: 4px 34px;
-    display: inline-block;
+    display: flex;
+    margin-top: 3em;
+    margin-left: 2em;
+    justify-content: space-around;
+    align-items: center;
 }
 
 a:link {
@@ -56,19 +94,11 @@ p{
 }
 input {
     width: 100%;
-    padding: 12px 20px;
+    padding: 0.7em;
     margin: 1px 0;
     box-sizing: border-box;
     border-radius: 12px;
-
-}
-body{
-    background-color : gainsboro;
+    background-color: #d3d2d2;
 
 
-}
-
-
-h1 {
-    color: red;
 }

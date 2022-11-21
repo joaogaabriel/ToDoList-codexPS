@@ -1,3 +1,4 @@
+const Usuario = require("../models/Usuario");
 const User = require("../models/Usuario");
 const usuario = require("../routes/routes");
 
@@ -18,20 +19,18 @@ const setUser = async(req, res) => {
     
 const createUser = async (req, res) => {
     res.render("usuario");
-    const usuario = await new User({
-        nome: req.body.nome,
-        email: req.body.email,
-        senha: req.body.senha
-    })
-    usuario.save(function(err){
-        if(err){
-            console.log(err)
-        } else{
-            res.redirect("/")
-        }
-    })
+    const {nome, email, senha} = req.body;
+    let data = {};
+    let user = await Usuario.findOne({email});
+    if (!user){
+        data = {nome, email, senha};
 
-} 
+        user = await Usuario.create(data);
+        return res.status(200).json(user);
+    }else{
+        return res.status(500);
+    }
+}
 
 
 
